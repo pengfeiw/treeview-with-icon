@@ -33,8 +33,9 @@
             // 
             // wpfTreeView1
             // 
+            this.wpfTreeView1.BackColor = System.Drawing.SystemColors.Control;
             this.wpfTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wpfTreeView1.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.wpfTreeView1.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
             this.wpfTreeView1.FullRowSelect = true;
             this.wpfTreeView1.ItemHeight = 30;
             this.wpfTreeView1.Location = new System.Drawing.Point(0, 0);

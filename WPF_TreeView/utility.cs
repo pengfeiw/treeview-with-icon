@@ -26,4 +26,26 @@ namespace WPF_TreeView
 
         private TreeNode _node;
     }
+
+    public class TreeNodeNewBtnClickEventArgs : EventArgs
+    {
+        public TreeNodeNewBtnClickEventArgs(TreeNode node)
+        {
+            this._node = node;
+        }
+        public TreeNode Node { get { return _node; } }
+
+        private TreeNode _node;
+    }
+
+    public class TreeNodeOpenBtnClickEventArgs : EventArgs
+    {
+        public TreeNodeOpenBtnClickEventArgs(TreeNode node)
+        {
+            this._node = node;
+        }
+        public TreeNode Node { get { return _node; } }
+
+        private TreeNode _node;
+    }
 }

@@ -23,6 +23,16 @@ namespace WPF_TreeView
             _mouseHover = true;
             MouseEnterEvent(new TreeNodeMouseEnterEventArgs(this));
         }
+
+        public void newBtnClick()
+        {
+            newBtnClickEvent(new TreeNodeNewBtnClickEventArgs(this));
+        }
+        public void openBtnClick()
+        {
+            openBtnClickEvent(new TreeNodeOpenBtnClickEventArgs(this));
+        }
+
         public void mouseLeave()
         {
             _mouseHover = false;
@@ -33,10 +43,15 @@ namespace WPF_TreeView
         public delegate void TreeNodeMouseLeaveEventHandler(TreeNodeMouseLeaveEventArgs e);
         public event TreeNodeMouseLeaveEventHandler MouseLeaveEvent;
         public event TreeNodeMouseEnterEventHandler MouseEnterEvent;
+
+        public delegate void newBtnClickEventHandler(TreeNodeNewBtnClickEventArgs e);
+        public event newBtnClickEventHandler newBtnClickEvent;
+        public delegate void openBtnClickEventHandler(TreeNodeOpenBtnClickEventArgs e);
+        public event openBtnClickEventHandler openBtnClickEvent;
+
         public WpfTreeNode(string text, bool isDrawButton) : base(text)
         {
             this.isDrawButton = isDrawButton;
-
             MouseEnterEvent += new TreeNodeMouseEnterEventHandler(MouseEnter);
             MouseLeaveEvent += new TreeNodeMouseLeaveEventHandler(MouseLeave);
         }
