@@ -28,27 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("节点0");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("节点1");
             this.wpfTreeView1 = new WPF_TreeView.WpfTreeView();
             this.SuspendLayout();
             // 
             // wpfTreeView1
             // 
+            this.wpfTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wpfTreeView1.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
             this.wpfTreeView1.FullRowSelect = true;
             this.wpfTreeView1.ItemHeight = 30;
-            this.wpfTreeView1.Location = new System.Drawing.Point(-3, 12);
+            this.wpfTreeView1.Location = new System.Drawing.Point(0, 0);
             this.wpfTreeView1.Name = "wpfTreeView1";
-            treeNode1.Name = "节点0";
-            treeNode1.Text = "节点0";
-            treeNode2.Name = "节点1";
-            treeNode2.Text = "节点1";
-            this.wpfTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
             this.wpfTreeView1.ShowLines = false;
-            this.wpfTreeView1.Size = new System.Drawing.Size(122, 91);
+            this.wpfTreeView1.Size = new System.Drawing.Size(284, 262);
             this.wpfTreeView1.TabIndex = 0;
             // 
             // Form1

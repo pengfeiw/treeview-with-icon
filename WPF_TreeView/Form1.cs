@@ -15,6 +15,10 @@ namespace WPF_TreeView
         public Form1()
         {
             InitializeComponent();
+            this.wpfTreeView1.Nodes.Add(new WpfTreeNode("节点1", true));
+            this.wpfTreeView1.Nodes.Add(new WpfTreeNode("节点2", true));
+
+            this.wpfTreeView1.Nodes.Add(new WpfTreeNode("节点3", false));
         }
     }
 }

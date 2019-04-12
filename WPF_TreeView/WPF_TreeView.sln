@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_TreeView", "WPF_TreeView.csproj", "{8A07E8DE-95FA-4D28-9DDD-C89648E9A40D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewDemo", "..\TreeViewDemo\TreeViewDemo.csproj", "{3D4991FF-FDBD-420A-9769-A754F403B801}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{8A07E8DE-95FA-4D28-9DDD-C89648E9A40D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A07E8DE-95FA-4D28-9DDD-C89648E9A40D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A07E8DE-95FA-4D28-9DDD-C89648E9A40D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D4991FF-FDBD-420A-9769-A754F403B801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D4991FF-FDBD-420A-9769-A754F403B801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D4991FF-FDBD-420A-9769-A754F403B801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D4991FF-FDBD-420A-9769-A754F403B801}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

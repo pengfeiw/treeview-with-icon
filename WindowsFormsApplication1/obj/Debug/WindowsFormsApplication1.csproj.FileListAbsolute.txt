@@ -6,3 +6,11 @@ D:\program\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.Ge
 D:\program\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 D:\program\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 D:\program\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\program\CustomTree\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\program\CustomTree\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\program\CustomTree\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\program\CustomTree\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\program\CustomTree\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\program\CustomTree\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\program\CustomTree\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\program\CustomTree\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache

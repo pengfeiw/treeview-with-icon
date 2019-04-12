@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project1", "..\Project1\Project1.csproj", "{47129D2A-9AB8-48C3-8DF5-9A21DEFDD75A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TX_Widget", "..\TX_Widget\TX_Widget.csproj", "{C6E401DF-F74B-48FC-B5B5-FD278DD9C03B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{47129D2A-9AB8-48C3-8DF5-9A21DEFDD75A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47129D2A-9AB8-48C3-8DF5-9A21DEFDD75A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47129D2A-9AB8-48C3-8DF5-9A21DEFDD75A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E401DF-F74B-48FC-B5B5-FD278DD9C03B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E401DF-F74B-48FC-B5B5-FD278DD9C03B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E401DF-F74B-48FC-B5B5-FD278DD9C03B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E401DF-F74B-48FC-B5B5-FD278DD9C03B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

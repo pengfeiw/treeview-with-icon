@@ -1,0 +1,8 @@
+D:\工作代码\Release1.5_BridgeWise\src\TX_Control\obj\Debug\ResolveAssemblyReference.cache
+D:\工作代码\Release1.5_BridgeWise\src\TX_Control\obj\Debug\BWControl.BWForm.resources
+D:\工作代码\Release1.5_BridgeWise\src\TX_Control\obj\Debug\BWControl.Resource1.resources
+D:\工作代码\Release1.5_BridgeWise\src\TX_Control\obj\Debug\TX_Control.csproj.GenerateResource.Cache
+D:\工作代码\Release1.5_BridgeWise\Debug32\TX_Control.dll
+D:\工作代码\Release1.5_BridgeWise\Debug32\TX_Control.pdb
+D:\工作代码\Release1.5_BridgeWise\src\TX_Control\obj\Debug\TX_Control.dll
+D:\工作代码\Release1.5_BridgeWise\src\TX_Control\obj\Debug\TX_Control.pdb
