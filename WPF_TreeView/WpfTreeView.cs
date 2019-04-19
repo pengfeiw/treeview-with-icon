@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using System.Collections.Generic;
 
 namespace WPF_TreeView
 {
@@ -15,13 +16,25 @@ namespace WPF_TreeView
         const int buttonWidht = 16;
 
         private Color _btnBackgroundColor = Color.Transparent;
+
+        //Prevent flicker
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+                return cp;
+            }
+        } 
+
         public WpfTreeView()
         {
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             ShowLines = true;
             FullRowSelect = true;
             ItemHeight = 30;
-            DrawMode = TreeViewDrawMode.OwnerDrawAll;
+            DrawMode = TreeViewDrawMode.OwnerDrawText;
             this.MouseMove += new MouseEventHandler(MouseMoveListener);
         }
 
@@ -64,7 +77,8 @@ namespace WPF_TreeView
         //由mouseMove确定是否离开TreeNode.
         private void MouseMoveListener(object sender, MouseEventArgs e)
         {
-            foreach(TreeNode node in this.Nodes)
+            List<TreeNode> nodes = this.GetAllNodes();
+            foreach (TreeNode node in nodes)
             {
                 WpfTreeNode customTreeNode = node as WpfTreeNode;
                 if (customTreeNode != null)
@@ -112,6 +126,27 @@ namespace WPF_TreeView
             {
                 tnode.openBtnClick();
             }
+        }
+
+        private List<TreeNode> GetAllNodes(TreeNode rootNode)
+        {
+            List<TreeNode> nodes = new List<TreeNode>();
+            nodes.Add(rootNode);
+            foreach (TreeNode node in rootNode.Nodes)
+            {
+                nodes.AddRange(GetAllNodes(node));
+            }
+            return nodes;
+        }
+
+        public List<TreeNode> GetAllNodes()
+        {
+            List<TreeNode> nodes = new List<TreeNode>();
+            foreach (TreeNode node in this.Nodes)
+            {
+                nodes.AddRange(GetAllNodes(node));
+            }
+            return nodes;
         }
     }
 }
