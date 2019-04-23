@@ -7,7 +7,7 @@
     <ProjectGuid>{8A07E8DE-95FA-4D28-9DDD-C89648E9A40D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WPF_TreeView</RootNamespace>
+    <RootNamespace>WPFTreeView</RootNamespace>
     <AssemblyName>WPF_TreeView</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -57,9 +57,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
-    <Compile Include="utility.cs" />
-    <Compile Include="WpfTreeNode.cs" />
-    <Compile Include="WpfTreeView.cs">
+    <Compile Include="WpfTreeView\ButtonMenu.cs" />
+    <Compile Include="WpfTreeView\BWTreeEventArgs.cs" />
+    <Compile Include="WpfTreeView\WpfTreeNode.cs" />
+    <Compile Include="WpfTreeView\WpfTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
@@ -73,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,10 +94,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="NewFile1_16X16.png" />
+    <None Include="open3[16x16x8BPP].png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="open3[16x16x8BPP].png" />
+    <None Include="copy1[16x16x8BPP].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="delete2[16x16x8BPP] - 副本.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NewFile1[16x16x8BPP] - 副本.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Rename1[16x16x8BPP].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Save1[16x16x8BPP].png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

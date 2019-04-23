@@ -7,42 +7,68 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WPFTreeView;
 
-namespace WPF_TreeView
+namespace WPFTreeView
 {
     public partial class Form1 : Form
     {
+        Image openImage = Resource1.openFile;
+        Image saveImage = Resource1.save;
+        Image deleteImage = Resource1.delete;
+        Image newImage = Resource1.newFile;
+        Image copyImage = Resource1.copy;
         public Form1()
         {
             InitializeComponent();
-            this.wpfTreeView1.Nodes.Add(new WpfTreeNode("节点1", true));
-            this.wpfTreeView1.Nodes.Add(new WpfTreeNode("节点2", true));
-            this.wpfTreeView1.Nodes.Add(new WpfTreeNode("节点3", true));
-            this.wpfTreeView1.Nodes.Add(new WpfTreeNode("节点4", true));
 
-            this.wpfTreeView1.Nodes[0].Nodes.Add(new WpfTreeNode("子节点0", false));
-            this.wpfTreeView1.Nodes[1].Nodes.Add(new WpfTreeNode("子节点1", false));
-            this.wpfTreeView1.Nodes[2].Nodes.Add(new WpfTreeNode("子节点2", false));
-            this.wpfTreeView1.Nodes[3].Nodes.Add(new WpfTreeNode("子节点3", false));
-            this.wpfTreeView1.Nodes[3].Nodes.Add(new WpfTreeNode("子节点4", false));
+            ButtonMenu bm1 = new ButtonMenu(this.wpfTreeView1);
+            ButtonMenu bm2 = new ButtonMenu(this.wpfTreeView1);
 
-            foreach(WpfTreeNode node in this.wpfTreeView1.Nodes)
-            {
-                if (node != null)
-                {
-                    node.newBtnClickEvent += new WpfTreeNode.newBtnClickEventHandler(newBtnListener);
-                    node.openBtnClickEvent += new WpfTreeNode.openBtnClickEventHandler(openBtnListener);
-                }
-            }
+            bm1.AddButtonItems(new ButtonItem(newImage, "New File", new ButtonItemClickEventHandler(newFileClick)));
+            bm1.AddButtonItems(new ButtonItem(openImage, "Open File", new ButtonItemClickEventHandler(openFileClick)));
+            bm2.AddButtonItems(new ButtonItem(saveImage, "Save File", new ButtonItemClickEventHandler(saveFileClick)));
+            bm2.AddButtonItems(new ButtonItem(deleteImage, "Delete File", new ButtonItemClickEventHandler(deleteFileClick)));
+            bm2.AddButtonItems(new ButtonItem(copyImage, "Save File", new ButtonItemClickEventHandler(copyFileClick)));
+            
+            WPFTreeNode root = this.wpfTreeView1.AddWPFTreeNode("WpfTreeView Demo");
+            WPFTreeNode child1 =  root.AddWPFTreeNode("节点1", bm1);
+            WPFTreeNode child1_1 = child1.AddWPFTreeNode("节点1-1", bm2);
+            child1_1.AddWPFTreeNode("1");
+            child1_1.AddWPFTreeNode("2");
+            child1_1.AddWPFTreeNode("3");
+            child1.AddWPFTreeNode("节点1-2", bm2);
+            WPFTreeNode child2 =  root.AddWPFTreeNode("节点2", bm1);
+            child2.AddWPFTreeNode("节点2-1", bm2);
+            WPFTreeNode child3 =  root.AddWPFTreeNode("节点3", bm1);
+            child3.AddWPFTreeNode("节点2-1", bm2);
+
+            this.wpfTreeView1.ExpandAll();
         }
 
-        private void newBtnListener(TreeNodeNewBtnClickEventArgs e)
+        private void newFileClick(ButtonItemClickEventArgs e)
         {
-            MessageBox.Show(e.Node.Text + ":New File");
+            MessageBox.Show(e.Node.Text + ":New File.");
         }
-        private void openBtnListener(TreeNodeOpenBtnClickEventArgs e)
+
+        private void openFileClick(ButtonItemClickEventArgs e)
         {
-            MessageBox.Show(e.Node.Text + ":Open File");
+            MessageBox.Show(e.Node.Text + ":Open File.");
+        }
+
+        private void saveFileClick(ButtonItemClickEventArgs e)
+        {
+            MessageBox.Show(e.Node.Text + ":Save File.");
+        }
+
+        private void deleteFileClick(ButtonItemClickEventArgs e)
+        {
+            MessageBox.Show(e.Node.Text + ":Delete File.");
+        }
+
+        private void copyFileClick(ButtonItemClickEventArgs e)
+        {
+            MessageBox.Show(e.Node.Text + ":Copy File.");
         }
     }
 }
