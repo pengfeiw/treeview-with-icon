@@ -31,16 +31,16 @@ namespace WPFTreeView
             bm2.AddButtonItems(new ButtonItem(deleteImage, "Delete File", new ButtonItemClickEventHandler(deleteFileClick)));
             bm2.AddButtonItems(new ButtonItem(copyImage, "Save File", new ButtonItemClickEventHandler(copyFileClick)));
             
-            WPFTreeNode root = this.wpfTreeView1.AddWPFTreeNode("WpfTreeView Demo");
-            WPFTreeNode child1 =  root.AddWPFTreeNode("节点1", bm1);
-            WPFTreeNode child1_1 = child1.AddWPFTreeNode("节点1-1", bm2);
+            WpfTreeNode root = this.wpfTreeView1.AddWPFTreeNode("WpfTreeView Demo");
+            WpfTreeNode child1 =  root.AddWPFTreeNode("节点1", bm1);
+            WpfTreeNode child1_1 = child1.AddWPFTreeNode("节点1-1", bm2);
             child1_1.AddWPFTreeNode("1");
             child1_1.AddWPFTreeNode("2");
             child1_1.AddWPFTreeNode("3");
             child1.AddWPFTreeNode("节点1-2", bm2);
-            WPFTreeNode child2 =  root.AddWPFTreeNode("节点2", bm1);
+            WpfTreeNode child2 =  root.AddWPFTreeNode("节点2", bm1);
             child2.AddWPFTreeNode("节点2-1", bm2);
-            WPFTreeNode child3 =  root.AddWPFTreeNode("节点3", bm1);
+            WpfTreeNode child3 =  root.AddWPFTreeNode("节点3", bm1);
             child3.AddWPFTreeNode("节点2-1", bm2);
 
             this.wpfTreeView1.ExpandAll();

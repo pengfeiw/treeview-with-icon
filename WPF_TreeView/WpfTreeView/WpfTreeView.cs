@@ -34,16 +34,16 @@ namespace WPFTreeView
             this.MouseMove += new MouseEventHandler(MouseMoveListener);
         }
 
-        public WPFTreeNode AddWPFTreeNode(string text, ButtonMenu buttons)
+        public WpfTreeNode AddWPFTreeNode(string text, ButtonMenu buttons)
         {
-            WPFTreeNode node = new WPFTreeNode(text, buttons);
+            WpfTreeNode node = new WpfTreeNode(text, buttons);
             this.Nodes.Add(node);
             return node;
         }
 
-        public WPFTreeNode AddWPFTreeNode(string text)
+        public WpfTreeNode AddWPFTreeNode(string text)
         {
-            WPFTreeNode node = new WPFTreeNode(text);
+            WpfTreeNode node = new WpfTreeNode(text);
             this.Nodes.Add(node);
             return node;
         }
@@ -54,7 +54,7 @@ namespace WPFTreeView
             int fontHeight = nodeFont.Height;
             e.Graphics.DrawString(e.Node.Text, nodeFont, new SolidBrush(this.ForeColor), new Point(e.Node.Bounds.Location.X, e.Node.Bounds.Location.Y + e.Node.Bounds.Height / 2 - fontHeight / 2));
 
-            WPFTreeNode customNode = e.Node as WPFTreeNode;
+            WpfTreeNode customNode = e.Node as WpfTreeNode;
             if (customNode != null && customNode.ButtonRight == true)
             {
                 Graphics graphics = e.Graphics;
@@ -116,7 +116,7 @@ namespace WPFTreeView
             return btnBounds;
         }
 
-        private Image getBtnImageOfNode(WPFTreeNode node, int btnIndex)
+        private Image getBtnImageOfNode(WpfTreeNode node, int btnIndex)
         {
             Image image = node.buttonMenu.buttonItems[btnIndex].image;
             return image;
@@ -127,7 +127,7 @@ namespace WPFTreeView
             List<TreeNode> nodes = this.GetAllNodes();
             foreach (TreeNode node in nodes)
             {
-                WPFTreeNode customTreeNode = node as WPFTreeNode;
+                WpfTreeNode customTreeNode = node as WpfTreeNode;
                 if (customTreeNode != null)
                 {
                     Rectangle nodeBounds = getNodeBounds(customTreeNode);
@@ -163,7 +163,7 @@ namespace WPFTreeView
 
         protected override void OnMouseDown(MouseEventArgs e)
         {
-            WPFTreeNode tnode = GetNodeAt(e.Location) as WPFTreeNode;
+            WpfTreeNode tnode = GetNodeAt(e.Location) as WpfTreeNode;
             if (tnode == null) return;
 
             for (int i = 0; i < tnode.buttonMenu.buttonItems.Count; i++)

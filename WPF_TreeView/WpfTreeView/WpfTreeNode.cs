@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace WPFTreeView
 {
-    public class WPFTreeNode : TreeNode
+    public class WpfTreeNode : TreeNode
     {
         [Description("BtnRight"), Category("Data")]
         public bool ButtonRight
@@ -22,20 +22,20 @@ namespace WPFTreeView
 
         public bool mouseHover { get { return _mouseHover; } }
 
-        public WPFTreeNode()
+        public WpfTreeNode()
         {
             MouseEnterEvent += new TreeNodeMouseEnterEventHandler(MouseEnter);
             MouseLeaveEvent += new TreeNodeMouseLeaveEventHandler(MouseLeave);
         }
 
-        public WPFTreeNode(string text)
+        public WpfTreeNode(string text)
             : base(text)
         {
             MouseEnterEvent += new TreeNodeMouseEnterEventHandler(MouseEnter);
             MouseLeaveEvent += new TreeNodeMouseLeaveEventHandler(MouseLeave);
         }
 
-        public WPFTreeNode(string text, ButtonMenu buttonMenu)
+        public WpfTreeNode(string text, ButtonMenu buttonMenu)
             : base(text)
         {
             this._buttonMenu = buttonMenu;
@@ -43,16 +43,16 @@ namespace WPFTreeView
             MouseLeaveEvent += new TreeNodeMouseLeaveEventHandler(MouseLeave);
         }
 
-        public WPFTreeNode AddWPFTreeNode(string text, ButtonMenu buttons)
+        public WpfTreeNode AddWPFTreeNode(string text, ButtonMenu buttons)
         {
-            WPFTreeNode node = new WPFTreeNode(text, buttons);
+            WpfTreeNode node = new WpfTreeNode(text, buttons);
             this.Nodes.Add(node);
             return node;
         }
 
-        public WPFTreeNode AddWPFTreeNode(string text)
+        public WpfTreeNode AddWPFTreeNode(string text)
         {
-            WPFTreeNode node = new WPFTreeNode(text);
+            WpfTreeNode node = new WpfTreeNode(text);
             this.Nodes.Add(node);
             return node;
         }

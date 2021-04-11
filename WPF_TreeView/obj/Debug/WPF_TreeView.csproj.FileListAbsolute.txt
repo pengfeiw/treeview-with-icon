@@ -16,3 +16,14 @@ D:\program\CustomTree\WPF_TreeView\obj\Debug\WPFTreeView.Resource1.resources
 D:\program\CustomTree\WPF_TreeView\obj\Debug\WPF_TreeView.csproj.GenerateResource.Cache
 D:\program\CustomTree\WPF_TreeView\obj\Debug\WPF_TreeView.exe
 D:\program\CustomTree\WPF_TreeView\obj\Debug\WPF_TreeView.pdb
+D:\program\wpfTreeview\WPF_TreeView\bin\Debug\WPF_TreeView.exe.config
+D:\program\wpfTreeview\WPF_TreeView\bin\Debug\WPF_TreeView.exe
+D:\program\wpfTreeview\WPF_TreeView\bin\Debug\WPF_TreeView.pdb
+D:\program\wpfTreeview\WPF_TreeView\obj\Debug\WPF_TreeView.csprojAssemblyReference.cache
+D:\program\wpfTreeview\WPF_TreeView\obj\Debug\WPFTreeView.Form1.resources
+D:\program\wpfTreeview\WPF_TreeView\obj\Debug\WPFTreeView.Properties.Resources.resources
+D:\program\wpfTreeview\WPF_TreeView\obj\Debug\WPFTreeView.Resource1.resources
+D:\program\wpfTreeview\WPF_TreeView\obj\Debug\WPF_TreeView.csproj.GenerateResource.cache
+D:\program\wpfTreeview\WPF_TreeView\obj\Debug\WPF_TreeView.csproj.CoreCompileInputs.cache
+D:\program\wpfTreeview\WPF_TreeView\obj\Debug\WPF_TreeView.exe
+D:\program\wpfTreeview\WPF_TreeView\obj\Debug\WPF_TreeView.pdb
